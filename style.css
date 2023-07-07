@@ -1,0 +1,630 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-coral: coral;
+    --transition: all 0.3s linear;
+    --spacing: 1.1px;
+    --radius: 0.5rem;
+}
+
+
+ul{
+    list-style: none;
+}
+
+h4,h5{
+    color: var(--clr-grey-10);
+    padding: 3px 1px;
+}
+h2,h6{
+    color: var(--clr-grey-3);
+}
+
+h5:hover{
+    border: 1px solid var(--clr-grey-9);
+    cursor: pointer;
+}
+
+/*  Start Styling NavBar */
+
+nav{
+    height: 90px;
+    width: 100%;
+}
+
+/* Nav Top */
+
+.Nav-Top{
+    background: var(--clr-grey-1);
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.Nav-Top-Left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px ;
+    width: 20%;
+}
+
+.Nav-Top-Left i{
+    color: var(--clr-grey-10);
+}
+
+.Nav-Top-Left h5{
+    letter-spacing: var(--spacing);
+}
+
+.Nav-Top-Center{
+    width: 50%;
+    position: relative;
+}
+
+.Nav-Top-Center input{
+    width: 100%;
+    border: none;
+    background: var(--clr-grey-10);
+    height: 30px;
+    border-radius: 0  var(--radius) var(--radius) 0;
+}
+
+.Nav-Top-Center i{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--clr-coral);
+    padding: 7px 9px;
+    border-radius: 0  var(--radius) var(--radius) 0;
+    color: var(--clr-grey-2);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.Nav-Top-Center i:hover{
+    opacity: 0.7;
+}
+
+.Nav-Top-Right{
+   width: 40%;
+}
+
+.Nav-Top-Right i{
+    cursor: pointer;
+}
+
+.Nav-Top-Right ul li{
+    display: inline-block;
+    color: var(--clr-grey-9);
+    margin-left: 15px;
+    padding: 3px 1px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.Nav-Top-Right ul li:hover{
+    border: 1px solid var(--clr-grey-9);
+}
+
+.Nav-Top-Right ul li i{
+    color: var(--clr-grey-10);
+}
+
+
+
+/* Nav Bottom */
+
+.Nav-Bottom{
+    height: 35%;
+    background: var(--clr-grey-3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    
+}
+
+.Nav-Bottom ul li {
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+
+.Nav-Bottom ul li a{
+    color: var(--clr-grey-10);
+    cursor: pointer;
+    padding: 3px 1px;
+    transition: var(--transition);
+}
+
+.Nav-Bottom ul li a:hover{
+    border: 1px solid var(--clr-grey-9);
+}
+
+.Nav-Bottom ul li a i{
+    margin-right: 2px;
+}
+
+
+/* SideBar */
+
+
+.SideBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: var(--clr-grey-10);
+    z-index: 888;
+    overflow-y: scroll;
+    transition: 0.6s;
+}
+
+.hide.SideBar{
+    left: -100%;
+}
+
+.SideBar div{
+    position: relative;
+    background: red;
+}
+
+.fa-x{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--clr-grey-10);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.SideBar h2{
+    text-align: center;
+    padding: 20px 0;
+    background: var(--clr-grey-2);
+    color: var(--clr-grey-10);
+}
+
+
+.SideBar ul{
+    padding: 20px 0;
+    border-bottom: 1px solid var(--clr-grey-1);
+}
+
+.SideBar ul h3{
+    padding: 0 0 20px 20px;
+}
+
+.SideBar ul li{
+    position: relative;
+    color: var(--clr-grey-2);
+    font-weight: 500;
+    letter-spacing: var(--spacing);
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.SideBar ul li:hover{
+    background: var(--clr-grey-9);
+}
+
+.SideBar i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+
+/* Start Styling Section Banner One*/
+
+.Banner{
+    height: 50vh;
+}
+
+.Banner img{
+    width: 100%;
+    height: 100%;
+   object-position: center;
+}
+
+
+/* Start Styling Section Two */
+
+.Two{
+    display: flex;
+    padding: 15px;
+    width: 100%;
+    gap: 10px;
+}
+
+.Two img{
+    margin-top: 10px;
+}
+
+.Two h3{
+    color: var(--clr-grey-3);
+     margin-bottom: 15px;
+}
+
+.Gaming{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 20%;
+    position: relative;
+}
+
+.Shop-Category{
+    width: 20%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    position: relative;
+}
+
+.Shop-Category img{
+    width: 170px;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+
+/* Start Styling Section Three */
+
+
+.Three{
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.Three img{
+    width: 90%;
+    margin: 10px 0;
+}
+
+.Three h6{
+    color: var(--clr-coral);
+}
+
+
+/* Start Styling Section Phone */
+
+.Phone{
+    margin: 20px;
+    height: 45vh;
+    background: var(--clr-grey-9);
+    position: relative;
+}
+
+.Phone h3{
+    padding: 10px;
+}
+
+.Phone ul{
+    overflow-x:scroll;  
+    display: flex;
+    padding: 10px;
+}
+
+.Phone img{
+    margin-right: 10px;
+}
+
+.Phone i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--clr-grey-10);
+    padding: 25px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.Phone i:hover{
+    border: 2px solid var(--clr-grey-4);
+}
+
+.Phone .right-Phone{
+    border-radius: var(--radius) 0 0 var(--radius);
+    right: 0px;
+}
+
+.Phone .left-Phone{
+    border-radius:0 var(--radius)  var(--radius) 0;
+    left: 0px;
+}
+
+
+/* Start Styling Section PC */
+
+
+.PC{
+    margin: 20px;
+    height: 45vh;
+    background: var(--clr-grey-9);
+    position: relative;
+}
+
+.PC h3{
+    padding: 10px;
+}
+
+.PC ul{
+    overflow-x:scroll;  
+    display: flex;
+    padding: 10px;
+}
+
+.PC img{
+    margin-right: 10px;
+}
+
+.PC i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--clr-grey-10);
+    padding: 25px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.PC i:hover{
+    border: 2px solid var(--clr-grey-4);
+}
+
+.PC .right-PC{
+    border-radius: var(--radius) 0 0 var(--radius);
+    right: 0px;
+}
+
+.PC .left-PC{
+    border-radius:0 var(--radius)  var(--radius) 0;
+    left: 0px;
+}
+
+
+
+/* Start Styling Section Shop */
+
+
+.Shop{
+    margin: 50px 5px;
+    display: flex;
+    width: 100%;
+}
+
+.Shop h3{
+    margin: 15px;
+    color: var(--clr-grey-3);
+}
+
+.Shop img{
+    margin: 0 5px;
+    width: 100%;
+}
+
+.Shop-Smart{
+    width: 25%;
+}
+
+.Shop-Comfy{
+   width: 25%;
+   text-align: center;  
+}
+
+.Shop-Comfy img{
+    width: 150px;
+
+}
+.Shop-Gaming{
+   width: 25%;  
+}
+
+.Shop-Gaming img{
+   width: 150px;
+}
+
+.Shop-Dog{
+   width: 25%;  
+}
+
+
+/* Start Styling Section cream */
+
+
+
+.cream{
+    margin: 20px;
+    height: 45vh;
+    background: var(--clr-grey-9);
+    position: relative;
+}
+
+.cream h3{
+    padding: 10px;
+}
+
+.cream ul{
+    overflow-x:scroll;  
+    display: flex;
+    padding: 10px;
+}
+
+.cream img{
+    margin-right: 10px;
+}
+
+.cream i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--clr-grey-10);
+    padding: 25px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cream i:hover{
+    border: 2px solid var(--clr-grey-4);
+}
+
+.cream .right-cream{
+    border-radius: var(--radius) 0 0 var(--radius);
+    right: 0px;
+}
+
+.cream .left-cream{
+    border-radius:0 var(--radius)  var(--radius) 0;
+    left: 0px;
+}
+
+
+/* Start Styling Section Fitness */
+
+
+.Fitness{
+    margin: 20px 0;
+    display: flex;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.Fitness img{
+    width: 95%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.Fitness h6{
+    color: var(--clr-coral);
+}
+
+
+/* Start Styling Section Book */
+
+
+
+.Book{
+    margin: 80px 20px 30px 20px;
+    height: 45vh;
+    background: var(--clr-grey-9);
+    position: relative;
+}
+
+.Book h3{
+    padding: 10px;
+}
+
+.Book ul{
+    overflow-x:scroll;  
+    display: flex;
+    padding: 10px;
+}
+
+.Book img{
+    margin-right: 10px;
+}
+
+.Book i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--clr-grey-10);
+    padding: 25px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.Book i:hover{
+    border: 2px solid var(--clr-grey-4);
+}
+
+.Book .right-Book{
+    border-radius: var(--radius) 0 0 var(--radius);
+    right: 0px;
+}
+
+.Book .left-Book{
+    border-radius:0 var(--radius)  var(--radius) 0;
+    left: 0px;
+}
+
+
+/* Start Styling footer */
+
+
+footer{
+    height: 60vh;
+    background: var(--clr-grey-2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer #footer-btn{
+   padding: 10px 0;
+   background: var(--clr-grey-3);
+   color: var(--clr-grey-10);
+   border: none;
+   font-size: 16px;
+   cursor: pointer;
+   letter-spacing: var(--spacing);
+   transition: var(--transition);
+}
+
+footer #footer-btn:hover{
+    background: var(--clr-grey-5);  
+}
+
+footer div{
+    margin: 20px auto;
+    display: flex;
+    gap: 30px;
+    color: var(--clr-grey-10);
+}
+
+footer div ul{
+    font-size: 18px;
+    text-align: left;
+}
+
+footer div ul li{
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--clr-grey-7);
+    cursor: pointer;
+}
+
+footer h6{
+    color: var(--clr-coral);
+    letter-spacing: var(--spacing);
+}
+
+
+
